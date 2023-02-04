@@ -1,0 +1,8 @@
+<!ELEMENT people (husband)*>
+<!ATTLIST husband employed CDATA "Yes">	<!-- CDATA = Character data. Default value = Yes -->
+<!ELEMENT husband (name,secondName?,age,wife)>	<!-- Only one -->
+<!ELEMENT name (#PCDATA)*>		<!-- Parserable Character Data -->
+<!ELEMENT secondName (#PCDATA)>
+<!ELEMENT age (#PCDATA)*>
+<!ELEMENT wife (wname,secondName?,age)*>	<!-- Can be many of those. No need to address age again because its already done -->
+<!ELEMENT wname (#PCDATA)*>

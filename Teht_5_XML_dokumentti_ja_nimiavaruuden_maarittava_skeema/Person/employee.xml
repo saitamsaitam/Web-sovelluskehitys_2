@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE xml>
+
+<person xmlns="http://www.person.fi/employee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.person.fi/employee employeeSchema.xsd">
+
+	<employee>
+		<firstname>John</firstname>
+		<lastname>Gary</lastname>
+		<age>40</age>
+		<address>Askistontie</address>
+		<city>Vantaa</city>
+		<country>Finland</country>
+	</employee>
+
+</person>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.person.fi/employee" 
+xmlns="http://www.person.fi/employee" elementFormDefault="qualified">
+
+	<xsd:include schemaLocation="employeeSchema.xsd"/>
+	<xsd:element name="person" />
+	<xsd:element name="employee" type="fullpersoninfo" />
+
+	<xsd:complexType name="personinfo">
+		<xsd:sequence>
+			<xsd:element name="firstname" type="xsd:string" />
+			<xsd:element name="lastname" type="xsd:string" />
+			<xsd:element name="age" type="xsd:integer" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="fullpersoninfo">
+		<xsd:complexContent>
+			<xsd:extension base="personinfo">
+				<xsd:sequence>
+					<xsd:element name="address" type="xsd:string" />
+					<xsd:element name="city" type="xsd:string" />
+					<xsd:element name="country" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+</xsd:schema>
